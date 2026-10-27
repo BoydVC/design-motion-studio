@@ -1,0 +1,133 @@
+{
+  "brief_id": "brief-025",
+  "source": "agent-brief-forge/out/brief-025.md + peer-review-025.json + citations-025.json",
+  "parent_briefs": [
+    "brief-010",
+    "brief-001",
+    "brief-008",
+    "brief-012",
+    "brief-018"
+  ],
+  "peer_review": {
+    "verdict": "accept_with_revisions_noted",
+    "independence": "simulated peer (same model family) — prefer external /interrogate before fleet law"
+  },
+  "desk": {
+    "name": "Demo Encoder Desk",
+    "rule": "silent slide/demo mp4 batch for Origin ships + Thu reveal; honesty captions; videoReview before watched claims; Hold/Apply before publish",
+    "pairs": "brief-010 decides whether a reveal may speak; brief-025 decides how the silent reel is encoded, captioned, and proven-watched",
+    "stages": [
+      "normalize",
+      "segment",
+      "honesty_lower_third",
+      "parity_probe",
+      "concat",
+      "captions_webvtt",
+      "poster",
+      "manifest_bind",
+      "hold_publish",
+      "video_review"
+    ]
+  },
+  "honesty_captions": {
+    "rule": "every frame family carries LIVE | SYNTHETIC | MIXED; never hide SYNTHETIC for cleaner demo",
+    "stamps": {
+      "SYNTHETIC": "fixture / planted catalog / scripted Playwright / fake LLM",
+      "LIVE": "real connector / real store / real Origin SHA captured against that state",
+      "MIXED": "any mix; per-row badges required; reel caption stays MIXED"
+    },
+    "surfaces_required": [
+      "open_lower_third",
+      "webvtt_sidecar",
+      "transcript.md",
+      "MANIFEST.honesty",
+      "hold_card_summary"
+    ]
+  },
+  "video_review": {
+    "rule": "never claim watched without videoReview receipt (frames_viewed == frames_extracted, transcript words, >=3 timestamped details); judge visual claims from frames not agent logs",
+    "required_fields": [
+      "video_sha256",
+      "duration_s",
+      "frames_extracted",
+      "frames_viewed",
+      "transcript_words_read",
+      "details",
+      "judged_from",
+      "reviewed_at",
+      "reviewer"
+    ],
+    "forbidden_without_receipt": [
+      "I watched the reveal",
+      "Looks good / LGTM on the video",
+      "Confirmed the demo path",
+      "Reviewed the Thu reel"
+    ]
+  },
+  "publish": {
+    "rule": "auto_publish_demo=0; green ffmpeg is not publish Apply; videoReview is not publish Apply; burn may encode locally only",
+    "auto_publish_demo": 0,
+    "local_encode_ok": true,
+    "destinations_need_human_apply": [
+      "slack",
+      "x",
+      "email",
+      "origin-draft-if-visibility-gt-private",
+      "youtube"
+    ]
+  },
+  "manifest_bind": {
+    "rule": "sha256 of mp4/webm/vtt/poster/transcript + git_sha + story_script + honesty + America/New_York encoded_at; attach fails on mismatch (pairs brief-010)",
+    "timezone": "America/New_York"
+  },
+  "auto_publish_demo": {
+    "rule": "hard lock; Doctor / helper cannot heal by flipping publish after green encode",
+    "value": 0
+  },
+  "claim_watched_without_review": {
+    "rule": "hard lock; keyword skim / log skim is not watched",
+    "value": 0
+  },
+  "denied_tools": [
+    "auto-publish-demo",
+    "claim-watched without videoReview",
+    "fabricate-demo / hide SYNTHETIC captions",
+    "LIVE label on SYNTHETIC encode",
+    "concat without ffprobe parity",
+    "encode Playwright webm before context.close",
+    "burn outbound Slack/X/email of reveal",
+    "self-Apply publish Hold card",
+    "KPD / firm footage in TokenMax encode",
+    "UTC-only encoded_at / reviewed_at stamps",
+    "trace-as-visual-proof (agent log for frames)"
+  ],
+  "refused_post_prefixes": [
+    "/api/auto-publish-demo",
+    "/api/claim-watched",
+    "/api/fabricate-demo"
+  ],
+  "scorecard": {
+    "auto_publish_demo": 0,
+    "claim_watched_without_review": 0,
+    "live_label_on_synthetic": 0,
+    "missing_captions": 0,
+    "manifest_sha_mismatch": 0,
+    "concat_parity_skip": 0,
+    "webm_unflushed_encode": 0,
+    "trace_used_as_visual_proof": 0,
+    "demo_sold_as_prod": 0,
+    "burn_outbound": 0,
+    "utc_only_stamps": 0,
+    "kpd_bleed": 0,
+    "timezone": "America/New_York"
+  },
+  "reveal_honesty": {
+    "rule": "silent reels prove curated paths, not production readiness; LIVE scorecard cells require measured receipts (brief-010)",
+    "forbidden": [
+      "silent reel cited as LIVE connector evidence",
+      "hiding SYNTHETIC chip in CSS for cleaner demo",
+      "docs-only we watched the video without videoReview"
+    ]
+  },
+  "separation": "brief-010 = adversarial reveal / demo-story webm + MANIFEST SHA / may-speak gates; brief-001 = Hold/Apply CAS; brief-008 = synthetic honesty; brief-012 = Draft Day / Origin ships; brief-018 = workspace CAS atomic publish; brief-025 = batch encode + caption honesty + watched-receipt specialization (auto_publish_demo=0 / claim_watched_without_review=0)"
+}

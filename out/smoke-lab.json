@@ -1,0 +1,871 @@
+{
+  "generated_at": "2026-10-27 00:22:10 EDT",
+  "project": "Smoke Lab",
+  "brief": "A short anti-slop lab for TokenMax burn night.",
+  "source_label": "pasted",
+  "source_chars": 336,
+  "design_system": {
+    "project": "Smoke Lab",
+    "brief": "A short anti-slop lab for TokenMax burn night.",
+    "palette": {
+      "label": "Ink night (restrained dark)",
+      "surface": "#0f1419",
+      "elevated": "#1a222c",
+      "ink": "#e7ecf3",
+      "muted": "#9aa7b8",
+      "line": "#2a3544",
+      "accent": "#e8b86d",
+      "accent_2": "#6ec6ff",
+      "why": "Dark only when the brief asks; gold accent instead of purple glow.",
+      "preset_id": "ink-night",
+      "css_vars": {
+        "--bg": "#0f1419",
+        "--panel": "#1a222c",
+        "--ink": "#e7ecf3",
+        "--muted": "#9aa7b8",
+        "--line": "#2a3544",
+        "--accent": "#e8b86d",
+        "--accent-2": "#6ec6ff",
+        "--radius": "12px",
+        "--space-1": "4px",
+        "--space-2": "8px",
+        "--space-3": "16px",
+        "--space-4": "24px",
+        "--space-5": "40px",
+        "--shadow": "0 1px 0 var(--line)",
+        "--font-display": "var(--font-body)",
+        "--font-body": "IBM Plex Sans, system-ui, sans-serif",
+        "--font-mono": "IBM Plex Mono, ui-monospace, monospace"
+      }
+    },
+    "typography": {
+      "display": "IBM Plex Sans",
+      "body": "IBM Plex Sans",
+      "mono": "IBM Plex Mono",
+      "scale": [
+        "13",
+        "15",
+        "18",
+        "24",
+        "32",
+        "44"
+      ],
+      "notes": "One grotesk family; hierarchy from size/weight, not a third face.",
+      "preset_id": "product"
+    },
+    "pattern": {
+      "id": "lab",
+      "name": "Audit lab",
+      "when": "checklists, scorers, design systems",
+      "structure": [
+        "brief form",
+        "score hero",
+        "category scorecard",
+        "findings list",
+        "storyboard"
+      ]
+    },
+    "anti_patterns": [
+      "No purple-to-blue gradients; accents stay brand-owned.",
+      "No Inter/Roboto-by-default; name the faces in DESIGN.md.",
+      "No three identical feature cards on marketing surfaces.",
+      "Motion explains state change; honor prefers-reduced-motion.",
+      "Copy states a specific outcome \u2014 ban unlock/supercharge/seamless.",
+      "Tokens in :root before one-off hex in components."
+    ],
+    "token_snippet": ":root {\n  --bg: #0f1419;\n  --panel: #1a222c;\n  --ink: #e7ecf3;\n  --muted: #9aa7b8;\n  --line: #2a3544;\n  --accent: #e8b86d;\n  --accent-2: #6ec6ff;\n  --radius: 12px;\n  --space-1: 4px;\n  --space-2: 8px;\n  --space-3: 16px;\n  --space-4: 24px;\n  --space-5: 40px;\n  --shadow: 0 1px 0 var(--line);\n  --font-display: var(--font-body);\n  --font-body: IBM Plex Sans, system-ui, sans-serif;\n  --font-mono: IBM Plex Mono, ui-monospace, monospace;\n  --font-display: \"IBM Plex Sans\", system-ui, sans-serif;\n  --font-body: \"IBM Plex Sans\", system-ui, sans-serif;\n  --font-mono: \"IBM Plex Mono\", ui-monospace, monospace;\n}"
+  },
+  "checklist": {
+    "catalog_size": 62,
+    "automated_rules": 35,
+    "summary": {
+      "slop_free_score": 100,
+      "grade": "A",
+      "critical_fails": 0,
+      "high_fails": 0,
+      "medium_fails": 0,
+      "automated_total": 35,
+      "automated_pass": 34,
+      "automated_fail": 0,
+      "automated_review": 1,
+      "manual_review_count": 27,
+      "formula": "max(0, 100 - (8\u00d7Critical + 4\u00d7High + 1.5\u00d7Medium)) on automated fails"
+    },
+    "by_category": {
+      "ai-slop": {
+        "pass": 15,
+        "fail": 0,
+        "review": 0,
+        "skip": 3
+      },
+      "typography": {
+        "pass": 2,
+        "fail": 0,
+        "review": 1,
+        "skip": 5
+      },
+      "color": {
+        "pass": 1,
+        "fail": 0,
+        "review": 0,
+        "skip": 5
+      },
+      "layout": {
+        "pass": 4,
+        "fail": 0,
+        "review": 0,
+        "skip": 4
+      },
+      "states": {
+        "pass": 1,
+        "fail": 0,
+        "review": 0,
+        "skip": 5
+      },
+      "a11y": {
+        "pass": 5,
+        "fail": 0,
+        "review": 0,
+        "skip": 1
+      },
+      "motion": {
+        "pass": 5,
+        "fail": 0,
+        "review": 0,
+        "skip": 1
+      },
+      "assets": {
+        "pass": 1,
+        "fail": 0,
+        "review": 0,
+        "skip": 1
+      },
+      "copy": {
+        "pass": 0,
+        "fail": 0,
+        "review": 0,
+        "skip": 2
+      }
+    },
+    "findings": [
+      {
+        "rule_id": "ai.purple-gradient",
+        "name": "Purple/violet gradient",
+        "category": "ai-slop",
+        "severity": "high",
+        "status": "pass",
+        "detail": "No purple/violet gradient detected.",
+        "automated": true,
+        "fix": "Swap to brand accent; flat fills first."
+      },
+      {
+        "rule_id": "ai.multi-hue-gradient",
+        "name": "Cross-family AI gradient",
+        "category": "ai-slop",
+        "severity": "high",
+        "status": "pass",
+        "detail": "No cross-family AI gradient pattern matched.",
+        "automated": true,
+        "fix": "Collapse to one hue or remove."
+      },
+      {
+        "rule_id": "ai.gradient-text",
+        "name": "Gradient clipped text",
+        "category": "ai-slop",
+        "severity": "medium",
+        "status": "pass",
+        "detail": "No gradient text clipping.",
+        "automated": true,
+        "fix": "Use solid ink for headings."
+      },
+      {
+        "rule_id": "ai.inter-default",
+        "name": "Inter as default face",
+        "category": "ai-slop",
+        "severity": "high",
+        "status": "pass",
+        "detail": "Inter not referenced.",
+        "automated": true,
+        "fix": "Choose a deliberate grotesk/serif/mono."
+      },
+      {
+        "rule_id": "ai.roboto-default",
+        "name": "Roboto as default face",
+        "category": "ai-slop",
+        "severity": "medium",
+        "status": "pass",
+        "detail": "Roboto not referenced.",
+        "automated": true,
+        "fix": "Replace with brand face."
+      },
+      {
+        "rule_id": "ai.system-only-stack",
+        "name": "System-only font stack",
+        "category": "ai-slop",
+        "severity": "medium",
+        "status": "pass",
+        "detail": "Named faces referenced in 1 font-family declarations.",
+        "automated": true,
+        "fix": "Add a named family before fallbacks."
+      },
+      {
+        "rule_id": "ai.lorem",
+        "name": "Lorem ipsum copy",
+        "category": "ai-slop",
+        "severity": "critical",
+        "status": "pass",
+        "detail": "No Lorem ipsum.",
+        "automated": true,
+        "fix": "Write real product copy."
+      },
+      {
+        "rule_id": "ai.slop-verbs",
+        "name": "Slop marketing verbs",
+        "category": "ai-slop",
+        "severity": "high",
+        "status": "pass",
+        "detail": "No classic slop verbs in copy.",
+        "automated": true,
+        "fix": "State a falsifiable outcome."
+      },
+      {
+        "rule_id": "ai.emoji-logo",
+        "name": "Emoji as logo/icon",
+        "category": "ai-slop",
+        "severity": "high",
+        "status": "pass",
+        "detail": "No emoji-as-logo pattern matched.",
+        "automated": true,
+        "fix": "Use SVG from one icon set."
+      },
+      {
+        "rule_id": "ai.introducing-pill",
+        "name": "Introducing pill badge",
+        "category": "ai-slop",
+        "severity": "high",
+        "status": "pass",
+        "detail": "No Introducing pill.",
+        "automated": true,
+        "fix": "Drop the pill; lead with the job."
+      },
+      {
+        "rule_id": "ai.three-cards",
+        "name": "Three equal feature cards",
+        "category": "ai-slop",
+        "severity": "high",
+        "status": "pass",
+        "detail": "No explicit 3-equal-column feature grid.",
+        "automated": true,
+        "fix": "Vary section layouts."
+      },
+      {
+        "rule_id": "ai.dark-glow",
+        "name": "Dark mode + glow accents",
+        "category": "ai-slop",
+        "severity": "medium",
+        "status": "pass",
+        "detail": "No dark-glow combo flagged.",
+        "automated": true,
+        "fix": "Earn glow from a light source."
+      },
+      {
+        "rule_id": "ai.fake-live",
+        "name": "Fake Live/Online badges",
+        "category": "ai-slop",
+        "severity": "medium",
+        "status": "pass",
+        "detail": "No fake liveness badge.",
+        "automated": true,
+        "fix": "Wire real status or remove."
+      },
+      {
+        "rule_id": "ai.eyebrows",
+        "name": "Section eyebrow overuse",
+        "category": "ai-slop",
+        "severity": "medium",
+        "status": "pass",
+        "detail": "No heavy eyebrow pattern.",
+        "automated": true,
+        "fix": "Cap ~1 eyebrow per 3 sections."
+      },
+      {
+        "rule_id": "ai.glassmorphism",
+        "name": "Glassmorphism everywhere",
+        "category": "ai-slop",
+        "severity": "medium",
+        "status": "pass",
+        "detail": "No backdrop blur.",
+        "automated": true,
+        "fix": "One glass surface max."
+      },
+      {
+        "rule_id": "ai.blob-hero",
+        "name": "Orphan hero blob glow",
+        "category": "ai-slop",
+        "severity": "medium",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Give light a source or remove."
+      },
+      {
+        "rule_id": "ai.centered-everything",
+        "name": "Everything-centered layout",
+        "category": "ai-slop",
+        "severity": "medium",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Introduce asymmetry on purpose."
+      },
+      {
+        "rule_id": "ai.sparkle-ai",
+        "name": "Sparkle = AI icon",
+        "category": "ai-slop",
+        "severity": "medium",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Use a real mark or none."
+      },
+      {
+        "rule_id": "type.tokens",
+        "name": "CSS design tokens present",
+        "category": "typography",
+        "severity": "high",
+        "status": "review",
+        "detail": ":root present but few custom properties \u2014 expand token set.",
+        "automated": true,
+        "fix": "Extract :root tokens."
+      },
+      {
+        "rule_id": "type.one-h1",
+        "name": "Exactly one H1",
+        "category": "typography",
+        "severity": "high",
+        "status": "pass",
+        "detail": "Exactly one <h1>.",
+        "automated": true,
+        "fix": "Demote extras to h2."
+      },
+      {
+        "rule_id": "type.heading-skip",
+        "name": "No skipped heading levels",
+        "category": "typography",
+        "severity": "medium",
+        "status": "pass",
+        "detail": "Heading order looks sequential (1 headings).",
+        "automated": true,
+        "fix": "Repair outline order."
+      },
+      {
+        "rule_id": "type.scale",
+        "name": "Consistent type scale",
+        "category": "typography",
+        "severity": "medium",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Document 14/16/20/28/40 (or similar)."
+      },
+      {
+        "rule_id": "type.two-families",
+        "name": "\u22642 font families",
+        "category": "typography",
+        "severity": "medium",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Drop the third face."
+      },
+      {
+        "rule_id": "type.line-length",
+        "name": "Body 45\u201375ch",
+        "category": "typography",
+        "severity": "medium",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Constrain prose containers."
+      },
+      {
+        "rule_id": "type.weight-contrast",
+        "name": "Deliberate weight contrast",
+        "category": "typography",
+        "severity": "info",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Regular body, semibold labels."
+      },
+      {
+        "rule_id": "type.tracking-display",
+        "name": "Tight display tracking",
+        "category": "typography",
+        "severity": "info",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "tracking \u22120.02 to \u22120.05em on heroes."
+      },
+      {
+        "rule_id": "color.aa-body",
+        "name": "WCAG AA body contrast",
+        "category": "color",
+        "severity": "critical",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Darken ink or lighten surface."
+      },
+      {
+        "rule_id": "color.one-accent",
+        "name": "One primary accent",
+        "category": "color",
+        "severity": "high",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Pick one; demote the rest."
+      },
+      {
+        "rule_id": "color.semantic",
+        "name": "Semantic red/green use",
+        "category": "color",
+        "severity": "medium",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Retarget misused hues."
+      },
+      {
+        "rule_id": "color.not-only-signal",
+        "name": "Color not sole signal",
+        "category": "color",
+        "severity": "high",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Add non-color cue."
+      },
+      {
+        "rule_id": "color.pure-bw",
+        "name": "Avoid pure black/white",
+        "category": "color",
+        "severity": "info",
+        "status": "pass",
+        "detail": "No pure black/white body pairing.",
+        "automated": true,
+        "fix": "Shift to ink/paper tokens."
+      },
+      {
+        "rule_id": "color.surface-levels",
+        "name": "3 surface levels",
+        "category": "color",
+        "severity": "medium",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Define --bg,--panel,--line."
+      },
+      {
+        "rule_id": "layout.focal",
+        "name": "One focal point",
+        "category": "layout",
+        "severity": "high",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Resize/recolor competing CTAs."
+      },
+      {
+        "rule_id": "layout.grid",
+        "name": "Consistent grid/gutters",
+        "category": "layout",
+        "severity": "medium",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "8px spacing scale."
+      },
+      {
+        "rule_id": "layout.heavy-shadow",
+        "name": "No stacked heavy shadows",
+        "category": "layout",
+        "severity": "medium",
+        "status": "pass",
+        "detail": "No stacked heavy shadows.",
+        "automated": true,
+        "fix": "Reduce blur radius."
+      },
+      {
+        "rule_id": "layout.rounded-all",
+        "name": "Radius not universal",
+        "category": "layout",
+        "severity": "medium",
+        "status": "pass",
+        "detail": "Radius usage looks restrained (0 declarations).",
+        "automated": true,
+        "fix": "Tokenise --radius-sm/md."
+      },
+      {
+        "rule_id": "layout.nested-cards",
+        "name": "No nested cards",
+        "category": "layout",
+        "severity": "high",
+        "status": "pass",
+        "detail": "No nested-card pattern matched.",
+        "automated": true,
+        "fix": "Use flat sections."
+      },
+      {
+        "rule_id": "layout.max-width",
+        "name": "Content max-width",
+        "category": "layout",
+        "severity": "medium",
+        "status": "pass",
+        "detail": "Prose/line-length constraint found.",
+        "automated": true,
+        "fix": "Set max-width on main."
+      },
+      {
+        "rule_id": "layout.mobile-stack",
+        "name": "Mobile stack designed",
+        "category": "layout",
+        "severity": "high",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Check 375px order + CTA."
+      },
+      {
+        "rule_id": "layout.whitespace",
+        "name": "Whitespace as material",
+        "category": "layout",
+        "severity": "info",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Pick a density target."
+      },
+      {
+        "rule_id": "state.button-hover",
+        "name": "Hover on controls",
+        "category": "states",
+        "severity": "high",
+        "status": "pass",
+        "detail": "Hover styles on interactive controls found.",
+        "automated": true,
+        "fix": "Add :hover border/fill."
+      },
+      {
+        "rule_id": "state.focus-ring",
+        "name": "Focus-visible ring",
+        "category": "states",
+        "severity": "critical",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Add :focus-visible outline."
+      },
+      {
+        "rule_id": "state.active",
+        "name": "Active/pressed",
+        "category": "states",
+        "severity": "medium",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Add :active transform."
+      },
+      {
+        "rule_id": "state.disabled",
+        "name": "Disabled styles",
+        "category": "states",
+        "severity": "medium",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Lower opacity + pointer-events."
+      },
+      {
+        "rule_id": "state.loading",
+        "name": "Loading state",
+        "category": "states",
+        "severity": "medium",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Busy button / skeleton."
+      },
+      {
+        "rule_id": "state.empty-error",
+        "name": "Empty + error states",
+        "category": "states",
+        "severity": "high",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Write empty copy + error style."
+      },
+      {
+        "rule_id": "a11y.focus-visible",
+        "name": "focus-visible CSS",
+        "category": "a11y",
+        "severity": "critical",
+        "status": "pass",
+        "detail": "focus-visible styles present.",
+        "automated": true,
+        "fix": "Add :focus-visible rules."
+      },
+      {
+        "rule_id": "a11y.lang",
+        "name": "html lang",
+        "category": "a11y",
+        "severity": "high",
+        "status": "pass",
+        "detail": "html[lang] set.",
+        "automated": true,
+        "fix": "Add lang=\"en\"."
+      },
+      {
+        "rule_id": "a11y.main",
+        "name": "main landmark",
+        "category": "a11y",
+        "severity": "high",
+        "status": "pass",
+        "detail": "<main> landmark present.",
+        "automated": true,
+        "fix": "Wrap primary content."
+      },
+      {
+        "rule_id": "a11y.clickable-div",
+        "name": "No clickable divs",
+        "category": "a11y",
+        "severity": "high",
+        "status": "pass",
+        "detail": "No onclick on div/span.",
+        "automated": true,
+        "fix": "Replace div onclick."
+      },
+      {
+        "rule_id": "a11y.viewport",
+        "name": "Viewport meta",
+        "category": "a11y",
+        "severity": "high",
+        "status": "pass",
+        "detail": "Viewport meta present.",
+        "automated": true,
+        "fix": "Add width=device-width meta."
+      },
+      {
+        "rule_id": "a11y.touch-44",
+        "name": "44px touch targets",
+        "category": "a11y",
+        "severity": "high",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Pad compact chips."
+      },
+      {
+        "rule_id": "motion.transition-all",
+        "name": "No transition:all",
+        "category": "motion",
+        "severity": "high",
+        "status": "pass",
+        "detail": "No transition-all.",
+        "automated": true,
+        "fix": "transition: transform, opacity."
+      },
+      {
+        "rule_id": "motion.bounce",
+        "name": "No bounce easing",
+        "category": "motion",
+        "severity": "high",
+        "status": "pass",
+        "detail": "No bounce easing.",
+        "automated": true,
+        "fix": "Use ease-out / custom curve."
+      },
+      {
+        "rule_id": "motion.layout-props",
+        "name": "No layout-prop animation",
+        "category": "motion",
+        "severity": "high",
+        "status": "pass",
+        "detail": "No layout-property transitions matched.",
+        "automated": true,
+        "fix": "Use transform."
+      },
+      {
+        "rule_id": "motion.reduced",
+        "name": "prefers-reduced-motion",
+        "category": "motion",
+        "severity": "critical",
+        "status": "pass",
+        "detail": "Little/no CSS motion; reduced-motion not required yet.",
+        "automated": true,
+        "fix": "Wrap motion in media query."
+      },
+      {
+        "rule_id": "motion.infinite",
+        "name": "No infinite decorative loops",
+        "category": "motion",
+        "severity": "high",
+        "status": "pass",
+        "detail": "No infinite CSS animations.",
+        "automated": true,
+        "fix": "Run once or on interaction."
+      },
+      {
+        "rule_id": "motion.one-concept",
+        "name": "One motion concept / view",
+        "category": "motion",
+        "severity": "medium",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Pick fade-up OR hover-lift."
+      },
+      {
+        "rule_id": "asset.placeholder-img",
+        "name": "No placeholder image hosts",
+        "category": "assets",
+        "severity": "critical",
+        "status": "pass",
+        "detail": "No placeholder image hosts.",
+        "automated": true,
+        "fix": "Request real assets."
+      },
+      {
+        "rule_id": "asset.real-screenshots",
+        "name": "Real product screenshots",
+        "category": "assets",
+        "severity": "high",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Capture real UI."
+      },
+      {
+        "rule_id": "copy.specific-headline",
+        "name": "Specific outcome headline",
+        "category": "copy",
+        "severity": "high",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Rewrite hero."
+      },
+      {
+        "rule_id": "copy.falsifiable-bullets",
+        "name": "Falsifiable feature bullets",
+        "category": "copy",
+        "severity": "medium",
+        "status": "skip",
+        "detail": "Manual / visual review \u2014 not auto-scored in this subset.",
+        "automated": false,
+        "fix": "Cut vague lines."
+      }
+    ],
+    "fails": [],
+    "reviews": [
+      {
+        "rule_id": "type.tokens",
+        "name": "CSS design tokens present",
+        "category": "typography",
+        "severity": "high",
+        "status": "review",
+        "detail": ":root present but few custom properties \u2014 expand token set.",
+        "automated": true,
+        "fix": "Extract :root tokens."
+      }
+    ]
+  },
+  "storyboard": {
+    "project": "Smoke Lab",
+    "concept": "One motion idea per view: feedback + hierarchy. No parallax, no infinite floats.",
+    "principles": [
+      "Animate transform/opacity only",
+      "UI feedback 100\u2013300ms; narrative \u2264700ms",
+      "Honor prefers-reduced-motion every time",
+      "Nothing loops forever for decoration",
+      "Interruptible; never block input >800ms"
+    ],
+    "panels": [
+      {
+        "panel": 1,
+        "beat": "Idle / entry",
+        "intent": "Establish the resting state and what the user can do first.",
+        "primary_action": "First paint of the primary surface; no decorative loops.",
+        "duration_ms": "0\u2013150",
+        "easing": "none / ease-out",
+        "properties": "opacity",
+        "reduced_motion": "Show final idle state immediately.",
+        "note": "For Smoke Lab: keep this beat tied to the brief \u2014 A short anti-slop lab for TokenMax burn night."
+      },
+      {
+        "panel": 2,
+        "beat": "Focus / hierarchy",
+        "intent": "Point attention at the primary action or score.",
+        "primary_action": "Subtle emphasis on focal CTA or score number.",
+        "duration_ms": "150\u2013250",
+        "easing": "cubic-bezier(0.2, 0.8, 0.2, 1)",
+        "properties": "opacity, transform (\u22644px)",
+        "reduced_motion": "Static emphasis via weight/contrast only.",
+        "note": "For Smoke Lab: keep this beat tied to the brief \u2014 A short anti-slop lab for TokenMax burn night."
+      },
+      {
+        "panel": 3,
+        "beat": "Input \u2192 busy",
+        "intent": "Acknowledge the user's submit/generate action.",
+        "primary_action": "Button press (~scale 0.97) then loading affordance.",
+        "duration_ms": "100\u2013200",
+        "easing": "ease-out",
+        "properties": "transform, opacity",
+        "reduced_motion": "Swap label to 'Working\u2026' with no motion.",
+        "note": "For Smoke Lab: keep this beat tied to the brief \u2014 A short anti-slop lab for TokenMax burn night."
+      },
+      {
+        "panel": 4,
+        "beat": "Result reveal",
+        "intent": "Show the new design system / score without a theme park.",
+        "primary_action": "Cross-fade result panel; one staggered list max.",
+        "duration_ms": "200\u2013350",
+        "easing": "ease-out",
+        "properties": "opacity, transform (Y 8px\u21920)",
+        "reduced_motion": "Instant swap to result; keep reading order.",
+        "note": "For Smoke Lab: keep this beat tied to the brief \u2014 A short anti-slop lab for TokenMax burn night."
+      },
+      {
+        "panel": 5,
+        "beat": "Storyboard / detail",
+        "intent": "Walk six motion panels or findings without scroll hijacks.",
+        "primary_action": "Panel-to-panel continuity; shared element if any.",
+        "duration_ms": "200\u2013300",
+        "easing": "ease-out",
+        "properties": "opacity, transform",
+        "reduced_motion": "Paginate with no travel; fade only if needed.",
+        "note": "For Smoke Lab: keep this beat tied to the brief \u2014 A short anti-slop lab for TokenMax burn night."
+      },
+      {
+        "panel": 6,
+        "beat": "Exit / next",
+        "intent": "Clear next step: export report, fix fails, or re-run.",
+        "primary_action": "CTA settle; toast confirm on save.",
+        "duration_ms": "150\u2013250",
+        "easing": "ease-out",
+        "properties": "opacity, transform",
+        "reduced_motion": "Toast appears static; no slide.",
+        "note": "For Smoke Lab: keep this beat tied to the brief \u2014 A short anti-slop lab for TokenMax burn night."
+      }
+    ],
+    "panel_count": 6
+  },
+  "inspired_by": {
+    "post": "https://x.com/AmirMushich/status/2113692928824484078",
+    "impeccable": "https://github.com/pbakaus/impeccable",
+    "ui_ux_pro_max": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill"
+  }
+}

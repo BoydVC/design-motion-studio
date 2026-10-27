@@ -1,0 +1,316 @@
+
+/* ===== /workspace/tokenmax/list-brief-pack/static/index.html ===== */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>List Brief Pack</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div class="mark">LB</div>
+      <div>
+        <h1>List Brief Pack</h1>
+        <p class="tag">X Lists → daily brief + marketplace templates · local · Grok Bot burn</p>
+      </div>
+    </div>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-tab="brief">Daily Brief</button>
+    <button class="tab" data-tab="live">Live Sample</button>
+    <button class="tab" data-tab="pack">Marketplace Pack</button>
+  </nav>
+
+  <main>
+    <section id="panel-brief" class="panel active">
+      <div class="banner" id="disclaimer"></div>
+      <div id="clusters" class="cards"></div>
+    </section>
+
+    <section id="panel-live" class="panel">
+      <p class="hint">Real public posts fetched this session via built-in X reads. Times shown in America/New_York.</p>
+      <div id="live" class="cards"></div>
+    </section>
+
+    <section id="panel-pack" class="panel">
+      <p class="hint">Roemmele-style fleet cards — copy the prompt markdown into a Grok Bot. Local pack only; not published.</p>
+      <div id="templates" class="cards"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>http://127.0.0.1:4332</span>
+    <span>· SYNTHETIC digests + LIVE sample · TokenMax-side</span>
+  </footer>
+
+  <div id="toast" hidden></div>
+  <script src="/app.js"></script>
+</body>
+</html>
+
+/* ===== /workspace/tokenmax/list-brief-pack/static/styles.css ===== */
+:root {
+  --bg: #0b1020;
+  --panel: #121a2f;
+  --card: #17223b;
+  --line: #243154;
+  --text: #e8eefc;
+  --muted: #9aadc9;
+  --accent: #6ea8ff;
+  --good: #3dd68c;
+  --warn: #f0b429;
+  --hot: #ff6b6b;
+  --chip: #243154;
+  --chip-hover: #2f4068;
+  --font: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: var(--font); }
+body { min-height: 100vh; display: flex; flex-direction: column; }
+.top {
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, #10182c, var(--bg));
+}
+.brand { display: flex; gap: .9rem; align-items: center; }
+.mark {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: linear-gradient(135deg, #3d7cff, #7b5cff);
+  display: grid; place-items: center; font-weight: 700; letter-spacing: .04em;
+}
+h1 { margin: 0; font-size: 1.25rem; font-weight: 650; }
+.tag { margin: .2rem 0 0; color: var(--muted); font-size: .85rem; }
+.stats { display: flex; gap: .5rem; flex-wrap: wrap; }
+.pill {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 999px;
+  padding: .35rem .7rem; font-size: .78rem; color: var(--muted);
+}
+.pill b { color: var(--text); font-weight: 650; }
+.tabs {
+  display: flex; gap: .4rem; padding: .75rem 1.5rem; border-bottom: 1px solid var(--line);
+}
+.tab {
+  background: transparent; border: 1px solid transparent; color: var(--muted);
+  padding: .45rem .9rem; border-radius: 999px; cursor: pointer; font: inherit;
+}
+.tab:hover { color: var(--text); background: var(--panel); }
+.tab.active { color: var(--text); background: var(--card); border-color: var(--line); }
+main { flex: 1; padding: 1.25rem 1.5rem 2rem; max-width: 1100px; width: 100%; margin: 0 auto; }
+.panel { display: none; }
+.panel.active { display: block; }
+.banner, .hint {
+  background: #15203a; border: 1px solid var(--line); border-radius: 12px;
+  padding: .75rem 1rem; color: var(--muted); font-size: .88rem; margin-bottom: 1rem;
+}
+.cards { display: grid; gap: .9rem; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  padding: 1rem 1.1rem; display: grid; gap: .55rem;
+}
+.card h2 { margin: 0; font-size: 1.05rem; }
+.meta { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
+.badge {
+  font-size: .7rem; text-transform: uppercase; letter-spacing: .04em;
+  border-radius: 999px; padding: .2rem .55rem; border: 1px solid var(--line);
+  color: var(--muted);
+}
+.badge.high { color: #ffd0d0; border-color: #5a2a2a; background: #2a1518; }
+.badge.medium { color: #ffe6b0; border-color: #5a4520; background: #2a2210; }
+.badge.low { color: #c5d4e8; }
+.badge.live { color: #b8f5d4; border-color: #1f5a3c; background: #102a1c; }
+.badge.synth { color: #c9b8ff; border-color: #3a2f5a; background: #1a1530; }
+.why { color: var(--accent); font-size: .9rem; }
+.summary { color: var(--text); line-height: 1.45; font-size: .95rem; margin: 0; }
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .2rem; }
+.chip {
+  background: var(--chip); border: 1px solid var(--line); color: var(--text);
+  border-radius: 999px; padding: .35rem .75rem; font: inherit; font-size: .82rem; cursor: pointer;
+}
+.chip:hover { background: var(--chip-hover); }
+.chip.saved { background: #1f3d2e; border-color: #2f6a4a; color: var(--good); }
+.chip.ignored { opacity: .55; }
+a { color: var(--accent); }
+pre.prompt {
+  background: #0d1426; border: 1px solid var(--line); border-radius: 10px;
+  padding: .85rem; overflow: auto; max-height: 280px;
+  font-family: var(--mono); font-size: .78rem; white-space: pre-wrap; color: #d7e2f7;
+}
+.row { display: flex; justify-content: space-between; gap: .75rem; align-items: start; flex-wrap: wrap; }
+.btn {
+  background: linear-gradient(135deg, #3d7cff, #5b6bff); color: white; border: 0;
+  border-radius: 10px; padding: .45rem .85rem; font: inherit; font-size: .85rem; cursor: pointer;
+}
+.btn:hover { filter: brightness(1.08); }
+.btn.ghost { background: transparent; border: 1px solid var(--line); color: var(--text); }
+footer {
+  border-top: 1px solid var(--line); padding: .75rem 1.5rem; color: var(--muted);
+  font-size: .78rem; display: flex; gap: .5rem; flex-wrap: wrap;
+}
+#toast {
+  position: fixed; bottom: 1.25rem; right: 1.25rem; background: #1c2a48;
+  border: 1px solid var(--line); color: var(--text); padding: .65rem .9rem;
+  border-radius: 10px; box-shadow: 0 8px 30px rgba(0,0,0,.35); z-index: 20;
+}
+@media (max-width: 720px) {
+  .top { flex-direction: column; align-items: flex-start; }
+}
+
+/* ===== /workspace/tokenmax/list-brief-pack/static/app.js ===== */
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+
+function toast(msg) {
+  const t = $("#toast");
+  t.hidden = false;
+  t.textContent = msg;
+  clearTimeout(toast._timer);
+  toast._timer = setTimeout(() => { t.hidden = true; }, 2200);
+}
+
+function urgencyBadge(u) {
+  return `<span class="badge ${u || "low"}">${u || "low"}</span>`;
+}
+
+async function loadStats() {
+  const s = await (await fetch("/api/stats")).json();
+  $("#stats").innerHTML = [
+    ["Lists", s.lists],
+    ["Clusters", s.clusters],
+    ["Live", s.live_posts],
+    ["Templates", s.templates],
+    ["Port", s.port],
+  ].map(([k, v]) => `<span class="pill"><b>${v}</b> ${k}</span>`).join("");
+}
+
+async function loadBrief() {
+  const b = await (await fetch("/api/brief")).json();
+  $("#disclaimer").textContent = b.disclaimer || "";
+  $("#clusters").innerHTML = b.clusters.map(c => `
+    <article class="card" data-id="${c.id}">
+      <div class="row">
+        <h2>${escapeHtml(c.headline)}</h2>
+        <div class="meta">
+          ${c.synthetic ? '<span class="badge synth">SYNTHETIC</span>' : ''}
+          ${c.live_anchor ? '<span class="badge live">LIVE ANCHOR</span>' : ''}
+          ${urgencyBadge(c.urgency)}
+          <span class="badge">${escapeHtml(c.list_name)}</span>
+        </div>
+      </div>
+      <p class="summary">${escapeHtml(c.summary)}</p>
+      <p class="why"><strong>Why Boyd:</strong> ${escapeHtml(c.why_boyd || "")}</p>
+      ${c.live_anchor ? `<p><a href="${c.live_anchor}" target="_blank" rel="noopener">Live post ↗</a></p>` : ""}
+      <div class="chips">
+        ${(c.actions || ["read","save_idea","ignore"]).map(a =>
+          `<button class="chip" data-action="${a}" data-cluster="${c.id}">${labelAction(a)}</button>`
+        ).join("")}
+      </div>
+    </article>
+  `).join("");
+
+  $$("#clusters .chip").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const action = btn.dataset.action;
+      const cluster_id = btn.dataset.cluster;
+      const res = await fetch("/api/action", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ cluster_id, action }),
+      });
+      const data = await res.json();
+      if (!res.ok) { toast(data.error || "failed"); return; }
+      $$(".chip", btn.parentElement).forEach(b => b.classList.remove("saved", "ignored"));
+      if (action === "save_idea" || action === "read") btn.classList.add("saved");
+      if (action === "ignore") btn.classList.add("ignored");
+      toast(`${labelAction(action)} · ${cluster_id}`);
+    });
+  });
+}
+
+function labelAction(a) {
+  return ({ read: "Read", save_idea: "Save idea", ignore: "Ignore" })[a] || a;
+}
+
+async function loadLive() {
+  const live = await (await fetch("/api/live")).json();
+  $("#live").innerHTML = live.posts.map(p => `
+    <article class="card">
+      <div class="row">
+        <h2>@${escapeHtml(p.handle)}</h2>
+        <div class="meta">
+          <span class="badge live">LIVE</span>
+          <span class="badge">${escapeHtml(p.theme)}</span>
+          <span class="badge">${escapeHtml(p.created_at_et)}</span>
+        </div>
+      </div>
+      <p class="summary">${escapeHtml(p.text)}</p>
+      <p class="why"><strong>Why Boyd:</strong> ${escapeHtml(p.why_boyd)}</p>
+      <p><a href="${p.url}" target="_blank" rel="noopener">${p.url}</a> · ${p.likes} likes</p>
+    </article>
+  `).join("");
+}
+
+async function loadTemplates() {
+  const pack = await (await fetch("/api/templates")).json();
+  const bodies = await Promise.all(
+    pack.templates.map(async t => {
+      const md = await (await fetch(`/api/template/${t.id}`)).text();
+      return { ...t, md };
+    })
+  );
+  $("#templates").innerHTML = bodies.map(t => `
+    <article class="card" id="tpl-${t.id}">
+      <div class="row">
+        <div>
+          <h2>${escapeHtml(t.title)}</h2>
+          <p class="summary">${escapeHtml(t.what_it_does)}</p>
+          <div class="meta" style="margin-top:.4rem">
+            ${(t.tags || []).map(tag => `<span class="badge">${escapeHtml(tag)}</span>`).join("")}
+          </div>
+        </div>
+        <button class="btn" data-copy="${t.id}">Copy prompt</button>
+      </div>
+      <pre class="prompt" id="body-${t.id}">${escapeHtml(t.md)}</pre>
+    </article>
+  `).join("");
+
+  $$("[data-copy]").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const id = btn.dataset.copy;
+      const text = $(`#body-${id}`).textContent;
+      try {
+        await navigator.clipboard.writeText(text);
+        toast(`Copied ${id}`);
+      } catch {
+        const ta = document.createElement("textarea");
+        ta.value = text; document.body.appendChild(ta); ta.select();
+        document.execCommand("copy"); ta.remove();
+        toast(`Copied ${id}`);
+      }
+    });
+  });
+}
+
+function escapeHtml(s) {
+  return String(s ?? "").replace(/[&<>"']/g, c => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+  })[c]);
+}
+
+$$(".tab").forEach(tab => {
+  tab.addEventListener("click", () => {
+    $$(".tab").forEach(t => t.classList.remove("active"));
+    $$(".panel").forEach(p => p.classList.remove("active"));
+    tab.classList.add("active");
+    $(`#panel-${tab.dataset.tab}`).classList.add("active");
+  });
+});
+
+(async function init() {
+  await Promise.all([loadStats(), loadBrief(), loadLive(), loadTemplates()]);
+})();

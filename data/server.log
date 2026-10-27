@@ -1,0 +1,115 @@
+Design Motion Studio -> http://127.0.0.1:4334/
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET / HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET /api/catalog HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET /api/seeds HTTP/1.1" 200 -
+[dms] 127.0.0.1 "POST /api/generate HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET / HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET /api/catalog HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET /api/seeds HTTP/1.1" 200 -
+[dms] 127.0.0.1 "POST /api/generate HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET / HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET / HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 code 404, message File not found
+[dms] 127.0.0.1 "GET /health HTTP/1.1" 404 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET / HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET / HTTP/1.1" 200 -
+Design Motion Studio -> http://127.0.0.1:4334/
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET /api/health HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET / HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET /api/catalog HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET /api/seeds HTTP/1.1" 200 -
+[dms] 127.0.0.1 "POST /api/generate HTTP/1.1" 200 -
+[dms] 127.0.0.1 "GET /api/brief025 HTTP/1.1" 200 -
+[dms] 127.0.0.1 "POST /api/auto-publish-demo HTTP/1.1" 403 -
+[dms] 127.0.0.1 "POST /api/claim-watched HTTP/1.1" 403 -
+[dms] 127.0.0.1 "POST /api/fabricate-demo HTTP/1.1" 403 -
+[dms] 127.0.0.1 "GET /api/brief025 HTTP/1.1" 200 -

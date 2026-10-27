@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Design Motion Studio</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">DM</div>
+      <div>
+        <h1>Design Motion Studio</h1>
+        <p class="tag">Brief → anti-slop system pass + 6-panel motion storyboard · local · :4334</p>
+      </div>
+    </div>
+    <div class="stats" id="stats"></div>
+  </header>
+
+  <main>
+    <section class="panel form-panel">
+      <h2>Project brief</h2>
+      <label for="name">Name</label>
+      <input id="name" type="text" placeholder="Kids Coding Studio" autocomplete="off" />
+      <label for="brief">One-paragraph brief</label>
+      <textarea id="brief" rows="4" placeholder="Who it's for, what it does, what must not look like LLM defaults…"></textarea>
+      <label for="source">Paste HTML/CSS to score (optional)</label>
+      <textarea id="source" rows="8" placeholder="Paste index.html + CSS here for real detector runs…"></textarea>
+      <div class="row">
+        <button type="button" class="btn" id="btn-generate">Generate pass</button>
+        <button type="button" class="btn ghost" id="btn-check">Score paste only</button>
+        <button type="button" class="btn ghost" id="btn-load-kids">Load Kids seed</button>
+        <button type="button" class="btn ghost" id="btn-load-list">Load List Brief seed</button>
+      </div>
+    </section>
+
+    <section class="panel" id="score-panel" hidden>
+      <div class="score-hero">
+        <div>
+          <p class="eyebrow">Slop-free score</p>
+          <p class="score" id="score">—</p>
+          <p class="muted" id="score-meta"></p>
+        </div>
+        <div id="palette-swatches" class="swatches"></div>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <article class="panel" id="system-panel">
+        <h2>Design system</h2>
+        <div id="system" class="muted">Generate a pass to see palette, type, and pattern.</div>
+      </article>
+      <article class="panel" id="fails-panel">
+        <h2>Automated fails</h2>
+        <div id="fails" class="muted">No run yet.</div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>Six-panel motion storyboard</h2>
+      <div id="storyboard" class="storyboard"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Seed reports</h2>
+      <div id="seeds" class="cards"></div>
+    </section>
+
+    <section class="panel law-panel" id="brief025">
+      <div class="panel-head">
+        <h2>Brief-025 law · demo encoder</h2>
+        <span class="badge-law">auto_publish_demo=0 · claim_watched=0</span>
+      </div>
+      <ul class="law-list">
+        <li><strong>Silent reel pipeline</strong> — normalize → segment → honesty lower-third → ffprobe parity → concat → WebVTT → MANIFEST SHA → Hold → <code>videoReview</code>.</li>
+        <li><strong>LIVE vs SYNTHETIC</strong> — every deliverable carries honesty captions (open lower-third + WebVTT + transcript). Never hide SYNTHETIC for a cleaner demo.</li>
+        <li><strong>Watched receipt</strong> — no “I watched / LGTM” without <code>videoReview</code> (frames + words + ≥3 timestamped details). Judge frames, not encoder logs.</li>
+        <li><strong>Fail closed</strong> — <code>/api/auto-publish-demo</code>, <code>/api/claim-watched</code>, <code>/api/fabricate-demo</code> refuse 403. Pairs brief-010. America/New_York. No KPD.</li>
+      </ul>
+      <p class="blurb" id="brief025-live">Loading live_check…</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>http://127.0.0.1:4334</span>
+    <span>· 62-rule catalog · subset automated · TokenMax-side burn</span>
+  </footer>
+  <div id="toast" hidden></div>
+  <script src="/app.js"></script>
+</body>
+</html>
