@@ -49,7 +49,7 @@ PALETTE_PRESETS = {
         "line": "#eadfce",
         "accent": "#e4572e",
         "accent_2": "#2a9d8f",
-        "why": "Kid-safe warmth; avoid neon purple on dark for Char/Vic tools.",
+        "why": "Kid-safe warmth; avoid neon purple on dark for Alex/Vic tools.",
     },
     "ops-brief": {
         "label": "Ops brief desk",

@@ -1,12 +1,12 @@
 {
   "generated_at": "2026-10-27 00:22:10 EDT",
   "project": "Kids Coding Studio",
-  "brief": "Local creative studio for Char (~13) and Vic (~11): age-safe project briefs, block lanes, parent overview, AI helper default off. Port 4331. Needs a warm playful system that does not look like purple neon SaaS slop.",
+  "brief": "Local creative studio for Alex (~13) and Sam (~11): age-safe project briefs, block lanes, parent overview, AI helper default off. Port 4331. Needs a warm playful system that does not look like purple neon SaaS slop.",
   "source_label": "/workspace/tokenmax/kids-coding-studio/web/index.html, /workspace/tokenmax/kids-coding-studio/web/app.css, /workspace/tokenmax/kids-coding-studio/web/app.js",
   "source_chars": 40200,
   "design_system": {
     "project": "Kids Coding Studio",
-    "brief": "Local creative studio for Char (~13) and Vic (~11): age-safe project briefs, block lanes, parent overview, AI helper default off. Port 4331. Needs a warm playful system that does not look like purple neon SaaS slop.",
+    "brief": "Local creative studio for Alex (~13) and Sam (~11): age-safe project briefs, block lanes, parent overview, AI helper default off. Port 4331. Needs a warm playful system that does not look like purple neon SaaS slop.",
     "palette": {
       "label": "Playful kids studio",
       "surface": "#fff8ef",
@@ -16,7 +16,7 @@
       "line": "#eadfce",
       "accent": "#e4572e",
       "accent_2": "#2a9d8f",
-      "why": "Kid-safe warmth; avoid neon purple on dark for Char/Vic tools.",
+      "why": "Kid-safe warmth; avoid neon purple on dark for Alex/Vic tools.",
       "preset_id": "playful-kids",
       "css_vars": {
         "--bg": "#fff8ef",
@@ -790,7 +790,7 @@
         "easing": "none / ease-out",
         "properties": "opacity",
         "reduced_motion": "Show final idle state immediately.",
-        "note": "For Kids Coding Studio: keep this beat tied to the brief \u2014 Local creative studio for Char (~13) and Vic (~11): age-safe project briefs, block lanes, parent overview, AI helper def\u2026"
+        "note": "For Kids Coding Studio: keep this beat tied to the brief \u2014 Local creative studio for Alex (~13) and Sam (~11): age-safe project briefs, block lanes, parent overview, AI helper def\u2026"
       },
       {
         "panel": 2,
@@ -801,7 +801,7 @@
         "easing": "cubic-bezier(0.2, 0.8, 0.2, 1)",
         "properties": "opacity, transform (\u22644px)",
         "reduced_motion": "Static emphasis via weight/contrast only.",
-        "note": "For Kids Coding Studio: keep this beat tied to the brief \u2014 Local creative studio for Char (~13) and Vic (~11): age-safe project briefs, block lanes, parent overview, AI helper def\u2026"
+        "note": "For Kids Coding Studio: keep this beat tied to the brief \u2014 Local creative studio for Alex (~13) and Sam (~11): age-safe project briefs, block lanes, parent overview, AI helper def\u2026"
       },
       {
         "panel": 3,
@@ -812,7 +812,7 @@
         "easing": "ease-out",
         "properties": "transform, opacity",
         "reduced_motion": "Swap label to 'Working\u2026' with no motion.",
-        "note": "For Kids Coding Studio: keep this beat tied to the brief \u2014 Local creative studio for Char (~13) and Vic (~11): age-safe project briefs, block lanes, parent overview, AI helper def\u2026"
+        "note": "For Kids Coding Studio: keep this beat tied to the brief \u2014 Local creative studio for Alex (~13) and Sam (~11): age-safe project briefs, block lanes, parent overview, AI helper def\u2026"
       },
       {
         "panel": 4,
@@ -823,7 +823,7 @@
         "easing": "ease-out",
         "properties": "opacity, transform (Y 8px\u21920)",
         "reduced_motion": "Instant swap to result; keep reading order.",
-        "note": "For Kids Coding Studio: keep this beat tied to the brief \u2014 Local creative studio for Char (~13) and Vic (~11): age-safe project briefs, block lanes, parent overview, AI helper def\u2026"
+        "note": "For Kids Coding Studio: keep this beat tied to the brief \u2014 Local creative studio for Alex (~13) and Sam (~11): age-safe project briefs, block lanes, parent overview, AI helper def\u2026"
       },
       {
         "panel": 5,
@@ -834,7 +834,7 @@
         "easing": "ease-out",
         "properties": "opacity, transform",
         "reduced_motion": "Paginate with no travel; fade only if needed.",
-        "note": "For Kids Coding Studio: keep this beat tied to the brief \u2014 Local creative studio for Char (~13) and Vic (~11): age-safe project briefs, block lanes, parent overview, AI helper def\u2026"
+        "note": "For Kids Coding Studio: keep this beat tied to the brief \u2014 Local creative studio for Alex (~13) and Sam (~11): age-safe project briefs, block lanes, parent overview, AI helper def\u2026"
       },
       {
         "panel": 6,
@@ -845,7 +845,7 @@
         "easing": "ease-out",
         "properties": "opacity, transform",
         "reduced_motion": "Toast appears static; no slide.",
-        "note": "For Kids Coding Studio: keep this beat tied to the brief \u2014 Local creative studio for Char (~13) and Vic (~11): age-safe project briefs, block lanes, parent overview, AI helper def\u2026"
+        "note": "For Kids Coding Studio: keep this beat tied to the brief \u2014 Local creative studio for Alex (~13) and Sam (~11): age-safe project briefs, block lanes, parent overview, AI helper def\u2026"
       }
     ],
     "panel_count": 6

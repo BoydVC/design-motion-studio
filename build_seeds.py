@@ -15,7 +15,7 @@ SEEDS = [
         "stem": "seed-kids-coding-studio",
         "name": "Kids Coding Studio",
         "brief": (
-            "Local creative studio for Char (~13) and Vic (~11): age-safe project briefs, "
+            "Local creative studio for Alex (~13) and Sam (~11): age-safe project briefs, "
             "block lanes, parent overview, AI helper default off. Port 4331. Needs a warm "
             "playful system that does not look like purple neon SaaS slop."
         ),
