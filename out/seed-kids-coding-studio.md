@@ -15,7 +15,7 @@ Formula: `max(0, 100 - (8×Critical + 4×High + 1.5×Medium)) on automated fails
 
 ## Design system suggestions
 
-- **Palette:** Playful kids studio (`playful-kids`) — Kid-safe warmth; avoid neon purple on dark for Alex/Vic tools.
+- **Palette:** Playful kids studio (`playful-kids`) — Kid-safe warmth; avoid neon purple on dark for Alex/Sam tools.
 - **Accent:** `#e4572e` / secondary `#2a9d8f`
 - **Type:** Nunito / Nunito / ui-monospace
 - **Scale:** 15 · 17 · 22 · 30 · 40
