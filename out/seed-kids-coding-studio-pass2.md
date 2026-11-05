@@ -5,7 +5,7 @@ Source: /workspace/tokenmax/kids-coding-studio/web/index.html, /workspace/tokenm
 
 ## Brief
 
-Local creative studio for Char (~13) and Vic (~11): age-safe project briefs, block lanes, parent overview, AI helper default off. Port 4331. Needs a warm playful system that does not look like purple neon SaaS slop.
+Local creative studio for Alex (~13) and Sam (~11): age-safe project briefs, block lanes, parent overview, AI helper default off. Port 4331. Needs a warm playful system that does not look like purple neon SaaS slop.
 
 ## Slop-Free Score
 
@@ -15,7 +15,7 @@ Formula: `max(0, 100 - (8×Critical + 4×High + 1.5×Medium)) on automated fails
 
 ## Design system suggestions
 
-- **Palette:** Playful kids studio (`playful-kids`) — Kid-safe warmth; avoid neon purple on dark for Char/Vic tools.
+- **Palette:** Playful kids studio (`playful-kids`) — Kid-safe warmth; avoid neon purple on dark for Alex/Sam tools.
 - **Accent:** `#e4572e` / secondary `#2a9d8f`
 - **Type:** Nunito / Nunito / ui-monospace
 - **Scale:** 15 · 17 · 22 · 30 · 40
@@ -75,7 +75,7 @@ Concept: One motion idea per view: feedback + hierarchy. No parallax, no infinit
 - **Timing:** 0–150 · none / ease-out
 - **Props:** opacity
 - **Reduced motion:** Show final idle state immediately.
-- **Note:** For Kids Coding Studio: keep this beat tied to the brief — Local creative studio for Char (~13) and Vic (~11): age-safe project briefs, block lanes, parent overview, AI helper def…
+- **Note:** For Kids Coding Studio: keep this beat tied to the brief — Local creative studio for Alex (~13) and Sam (~11): age-safe project briefs, block lanes, parent overview, AI helper def…
 
 ### Panel 2 — Focus / hierarchy
 - **Intent:** Point attention at the primary action or score.
@@ -83,7 +83,7 @@ Concept: One motion idea per view: feedback + hierarchy. No parallax, no infinit
 - **Timing:** 150–250 · cubic-bezier(0.2, 0.8, 0.2, 1)
 - **Props:** opacity, transform (≤4px)
 - **Reduced motion:** Static emphasis via weight/contrast only.
-- **Note:** For Kids Coding Studio: keep this beat tied to the brief — Local creative studio for Char (~13) and Vic (~11): age-safe project briefs, block lanes, parent overview, AI helper def…
+- **Note:** For Kids Coding Studio: keep this beat tied to the brief — Local creative studio for Alex (~13) and Sam (~11): age-safe project briefs, block lanes, parent overview, AI helper def…
 
 ### Panel 3 — Input → busy
 - **Intent:** Acknowledge the user's submit/generate action.
@@ -91,7 +91,7 @@ Concept: One motion idea per view: feedback + hierarchy. No parallax, no infinit
 - **Timing:** 100–200 · ease-out
 - **Props:** transform, opacity
 - **Reduced motion:** Swap label to 'Working…' with no motion.
-- **Note:** For Kids Coding Studio: keep this beat tied to the brief — Local creative studio for Char (~13) and Vic (~11): age-safe project briefs, block lanes, parent overview, AI helper def…
+- **Note:** For Kids Coding Studio: keep this beat tied to the brief — Local creative studio for Alex (~13) and Sam (~11): age-safe project briefs, block lanes, parent overview, AI helper def…
 
 ### Panel 4 — Result reveal
 - **Intent:** Show the new design system / score without a theme park.
@@ -99,7 +99,7 @@ Concept: One motion idea per view: feedback + hierarchy. No parallax, no infinit
 - **Timing:** 200–350 · ease-out
 - **Props:** opacity, transform (Y 8px→0)
 - **Reduced motion:** Instant swap to result; keep reading order.
-- **Note:** For Kids Coding Studio: keep this beat tied to the brief — Local creative studio for Char (~13) and Vic (~11): age-safe project briefs, block lanes, parent overview, AI helper def…
+- **Note:** For Kids Coding Studio: keep this beat tied to the brief — Local creative studio for Alex (~13) and Sam (~11): age-safe project briefs, block lanes, parent overview, AI helper def…
 
 ### Panel 5 — Storyboard / detail
 - **Intent:** Walk six motion panels or findings without scroll hijacks.
@@ -107,7 +107,7 @@ Concept: One motion idea per view: feedback + hierarchy. No parallax, no infinit
 - **Timing:** 200–300 · ease-out
 - **Props:** opacity, transform
 - **Reduced motion:** Paginate with no travel; fade only if needed.
-- **Note:** For Kids Coding Studio: keep this beat tied to the brief — Local creative studio for Char (~13) and Vic (~11): age-safe project briefs, block lanes, parent overview, AI helper def…
+- **Note:** For Kids Coding Studio: keep this beat tied to the brief — Local creative studio for Alex (~13) and Sam (~11): age-safe project briefs, block lanes, parent overview, AI helper def…
 
 ### Panel 6 — Exit / next
 - **Intent:** Clear next step: export report, fix fails, or re-run.
@@ -115,7 +115,7 @@ Concept: One motion idea per view: feedback + hierarchy. No parallax, no infinit
 - **Timing:** 150–250 · ease-out
 - **Props:** opacity, transform
 - **Reduced motion:** Toast appears static; no slide.
-- **Note:** For Kids Coding Studio: keep this beat tied to the brief — Local creative studio for Char (~13) and Vic (~11): age-safe project briefs, block lanes, parent overview, AI helper def…
+- **Note:** For Kids Coding Studio: keep this beat tied to the brief — Local creative studio for Alex (~13) and Sam (~11): age-safe project briefs, block lanes, parent overview, AI helper def…
 
 ## Category scorecard
 
