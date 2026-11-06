@@ -2,7 +2,7 @@
 
 Inspired by pbakaus/impeccable (62 deterministic rules) and public anti-slop
 audits (design.yaps.ai, jb.desishub.com, agent-design.com). Not a fork —
-local TokenMax subset Boyd can run on pasted HTML/CSS.
+local TokenMax subset Alex can run on pasted HTML/CSS.
 """
 from __future__ import annotations
 

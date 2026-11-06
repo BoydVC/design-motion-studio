@@ -203,7 +203,7 @@ async function loadBrief() {
         </div>
       </div>
       <p class="summary">${escapeHtml(c.summary)}</p>
-      <p class="why"><strong>Why Boyd:</strong> ${escapeHtml(c.why_boyd || "")}</p>
+      <p class="why"><strong>Why Alex:</strong> ${escapeHtml(c.why_boyd || "")}</p>
       ${c.live_anchor ? `<p><a href="${c.live_anchor}" target="_blank" rel="noopener">Live post ↗</a></p>` : ""}
       <div class="chips">
         ${(c.actions || ["read","save_idea","ignore"]).map(a =>
@@ -249,7 +249,7 @@ async function loadLive() {
         </div>
       </div>
       <p class="summary">${escapeHtml(p.text)}</p>
-      <p class="why"><strong>Why Boyd:</strong> ${escapeHtml(p.why_boyd)}</p>
+      <p class="why"><strong>Why Alex:</strong> ${escapeHtml(p.why_boyd)}</p>
       <p><a href="${p.url}" target="_blank" rel="noopener">${p.url}</a> · ${p.likes} likes</p>
     </article>
   `).join("");

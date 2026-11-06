@@ -71,7 +71,7 @@ design-motion-studio/
 - `data/brief025.json` + `GET /api/brief025`: Demo Encoder Desk law — silent slide/demo MP4 batch for Origin ships + Thu reveal; LIVE vs SYNTHETIC captions; `videoReview` before any watched claim; MANIFEST SHA bind; Hold/Apply before publish; `auto_publish_demo=0` / `claim_watched_without_review=0`; America/New_York; pairs brief-010.
 - POST stubs refuse **403**: `/api/auto-publish-demo`, `/api/claim-watched`, `/api/fabricate-demo`.
 - UI panel: **Brief-025 law · demo encoder**.
-- No KPD · no burn outbound · no cloud agents · no Boyd messages from this fold.
+- No KPD · no burn outbound · no cloud agents · no Alex messages from this fold.
 
 ## Commands
 

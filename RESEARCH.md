@@ -2,7 +2,7 @@
 
 Local TokenMax lab (burn night, America/New_York). Turns a project brief into a
 design-system suggestion pass, a 62-style anti-slop checklist with a real
-detector subset, and a six-panel motion storyboard. Inspired by Boyd's bookmark
+detector subset, and a six-panel motion storyboard. Inspired by Alex's bookmark
 of AmirMušić's "10 GitHub repos to turn you into a design/motion studio" post.
 
 ## Bookmark seed
@@ -55,7 +55,7 @@ mode when agents skip guidance (https://github.com/pbakaus/impeccable).
 
 Our catalog mirrors the **count and spirit** (62 rules across ai-slop, typography,
 color, layout, states, a11y, motion, assets/copy) with **35 local regex/heuristic
-detectors** Boyd can run on pasted HTML/CSS. Manual/visual rules stay in the
+detectors** Alex can run on pasted HTML/CSS. Manual/visual rules stay in the
 catalog as `skip` so the scorecard still shows the full surface area. This is not
 a binary of impeccable's engine; it is a TokenMax-side lab that stays on Python
 stdlib and the box.
